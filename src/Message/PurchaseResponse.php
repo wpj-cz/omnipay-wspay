@@ -8,33 +8,32 @@ use Omnipay\Common\Message\RedirectResponseInterface;
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
 
-	protected $endpoint = 'https://form.wspay.biz/Authorization.aspx';
+    protected $endpoint = 'https://form.wspay.biz/Authorization.aspx';
 
-	protected $testEndpoint = 'https://formtest.wspay.biz/Authorization.aspx';
+    protected $testEndpoint = 'https://formtest.wspay.biz/Authorization.aspx';
 
-	public function isSuccessful()
-	{
-		return false;
-	}
+    public function isSuccessful()
+    {
+        return false;
+    }
 
-	public function isRedirect()
-	{
-		return true;
-	}
+    public function isRedirect()
+    {
+        return true;
+    }
 
-	public function getRedirectUrl()
-	{
-		return $this->getRequest()->getTestMode() ? $this->testEndpoint : $this->endpoint;
-	}
+    public function getRedirectUrl()
+    {
+        return $this->getRequest()->getTestMode() ? $this->testEndpoint : $this->endpoint;
+    }
 
-	public function getRedirectMethod()
-	{
-		return 'POST';
-	}
+    public function getRedirectMethod()
+    {
+        return 'POST';
+    }
 
-	public function getRedirectData()
-	{
-		return $this->data;
-	}
-
+    public function getRedirectData()
+    {
+        return $this->data;
+    }
 }

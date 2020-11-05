@@ -14,177 +14,177 @@ abstract class AbstractRequest extends BaseAbstractRequest
 
     protected $testEndpoint = 'https://formtest.wspay.biz/Authorization.aspx';
 
-	public function getShopId()
-	{
-		return $this->getParameter('ShopID');
-	}
+    public function getShopId()
+    {
+        return $this->getParameter('ShopID');
+    }
 
-	public function setShopId($value)
-	{
-		return $this->setParameter('ShopID', $value);
-	}
+    public function setShopId($value)
+    {
+        return $this->setParameter('ShopID', $value);
+    }
 
-	public function getSecretKey()
-	{
-		return $this->getParameter('SecretKey');
-	}
+    public function getSecretKey()
+    {
+        return $this->getParameter('SecretKey');
+    }
 
-	public function setSecretKey(string $value)
-	{
-		return $this->setParameter('SecretKey', $value);
-	}
+    public function setSecretKey(string $value)
+    {
+        return $this->setParameter('SecretKey', $value);
+    }
 
-	public function getShoppingCartId()
-	{
-		return $this->getParameter('ShoppingCartID');
-	}
+    public function getShoppingCartId()
+    {
+        return $this->getParameter('ShoppingCartID');
+    }
 
-	public function setShoppingCartId(string $value)
-	{
-		return $this->setParameter('ShoppingCartID', $value);
-	}
+    public function setShoppingCartId(string $value)
+    {
+        return $this->setParameter('ShoppingCartID', $value);
+    }
 
-	public function getSignature()
-	{
-		return $this->getParameter('Signature');
-	}
+    public function getSignature()
+    {
+        return $this->getParameter('Signature');
+    }
 
-	public function setSignature(string $value)
-	{
-		return $this->setParameter('Signature', $value);
-	}
+    public function setSignature(string $value)
+    {
+        return $this->setParameter('Signature', $value);
+    }
 
-	public function getTotalAmount()
-	{
-		return $this->getParameter('TotalAmount');
-	}
+    public function getTotalAmount()
+    {
+        return $this->getParameter('TotalAmount');
+    }
 
-	public function setTotalAmount(string $value)
-	{
-		return $this->setParameter('TotalAmount', $value);
-	}
+    public function setTotalAmount(string $value)
+    {
+        return $this->setParameter('TotalAmount', $value);
+    }
 
-	public function setReturnUrl($value)
-	{
-		return $this->setParameter('ReturnURL', $value);
-	}
+    public function setReturnUrl($value)
+    {
+        return $this->setParameter('ReturnURL', $value);
+    }
 
-	public function getReturnUrl()
-	{
-		return $this->getParameter('ReturnURL');
-	}
-
-
-	public function setReturnErrorUrl($value)
-	{
-		return $this->setParameter('ReturnErrorURL', $value);
-	}
+    public function getReturnUrl()
+    {
+        return $this->getParameter('ReturnURL');
+    }
 
 
-	public function getReturnErrorURL()
-	{
-		return $this->getParameter('ReturnErrorURL');
-	}
+    public function setReturnErrorUrl($value)
+    {
+        return $this->setParameter('ReturnErrorURL', $value);
+    }
 
-	public function setCancelUrl($value)
-	{
-		return $this->setParameter('CancelURL', $value);
-	}
 
-	public function getCancelUrl()
-	{
-		return $this->getParameter('CancelURL');
-	}
+    public function getReturnErrorURL()
+    {
+        return $this->getParameter('ReturnErrorURL');
+    }
 
-	public function getLang()
-	{
-		return $this->getParameter('Lang');
-	}
+    public function setCancelUrl($value)
+    {
+        return $this->setParameter('CancelURL', $value);
+    }
 
-	public function setLang(string $value)
-	{
-		return $this->setParameter('Lang', $value);
-	}
+    public function getCancelUrl()
+    {
+        return $this->getParameter('CancelURL');
+    }
 
-	public function getIntAmount()
-	{
-		return $this->getParameter('IntAmount');
-	}
+    public function getLang()
+    {
+        return $this->getParameter('Lang');
+    }
 
-	public function setIntAmount(string $value)
-	{
-		return $this->setParameter('IntAmount', $value);
-	}
+    public function setLang(string $value)
+    {
+        return $this->setParameter('Lang', $value);
+    }
 
-	public function getIntCurrency()
-	{
-		return $this->getParameter('IntCurrency');
-	}
+    public function getIntAmount()
+    {
+        return $this->getParameter('IntAmount');
+    }
 
-	public function setIntCurrency(string $value)
-	{
-		return $this->setParameter('IntCurrency', $value);
-	}
+    public function setIntAmount(string $value)
+    {
+        return $this->setParameter('IntAmount', $value);
+    }
 
-	public function setPaymentPlan(string $value)
-	{
-		return $this->setParameter('PaymentPlan', $value);
-	}
+    public function getIntCurrency()
+    {
+        return $this->getParameter('IntCurrency');
+    }
 
-	public function getPaymentPlan()
-	{
-		return $this->getParameter('PaymentPlan');
-	}
+    public function setIntCurrency(string $value)
+    {
+        return $this->setParameter('IntCurrency', $value);
+    }
 
-	public function getCustomerFirstName()
-	{
-		return $this->getParameter('CustomerFirstName');
-	}
+    public function setPaymentPlan(string $value)
+    {
+        return $this->setParameter('PaymentPlan', $value);
+    }
 
-	public function setCustomerFirstName($value)
-	{
-		return $this->setParameter('CustomerFirstName', $value);
-	}
+    public function getPaymentPlan()
+    {
+        return $this->getParameter('PaymentPlan');
+    }
 
-	public function getCustomerLastName()
-	{
-		return $this->getParameter('CustomerLastName');
-	}
+    public function getCustomerFirstName()
+    {
+        return $this->getParameter('CustomerFirstName');
+    }
 
-	public function setCustomerLastName($value)
-	{
-		return $this->setParameter('CustomerLastName', $value);
-	}
+    public function setCustomerFirstName($value)
+    {
+        return $this->setParameter('CustomerFirstName', $value);
+    }
 
-	public function getCustomerEmail()
-	{
-		return $this->getParameter('CustomerEmail');
-	}
+    public function getCustomerLastName()
+    {
+        return $this->getParameter('CustomerLastName');
+    }
 
-	public function setCustomerEmail($value)
-	{
-		return $this->setParameter('CustomerEmail', $value);
-	}
+    public function setCustomerLastName($value)
+    {
+        return $this->setParameter('CustomerLastName', $value);
+    }
 
-	public function getCustomerPhone()
-	{
-		return $this->getParameter('CustomerPhone');
-	}
+    public function getCustomerEmail()
+    {
+        return $this->getParameter('CustomerEmail');
+    }
 
-	public function setCustomerPhone($value)
-	{
-		return $this->setParameter('CustomerPhone', $value);
-	}
+    public function setCustomerEmail($value)
+    {
+        return $this->setParameter('CustomerEmail', $value);
+    }
 
-	public function getCustomerCountry()
-	{
-		return $this->getParameter('CustomerCountry');
-	}
+    public function getCustomerPhone()
+    {
+        return $this->getParameter('CustomerPhone');
+    }
 
-	public function setCustomerCountry($value)
-	{
-		return $this->setParameter('CustomerCountry', $value);
-	}
+    public function setCustomerPhone($value)
+    {
+        return $this->setParameter('CustomerPhone', $value);
+    }
+
+    public function getCustomerCountry()
+    {
+        return $this->getParameter('CustomerCountry');
+    }
+
+    public function setCustomerCountry($value)
+    {
+        return $this->setParameter('CustomerCountry', $value);
+    }
 
     public function sendData($data)
     {
