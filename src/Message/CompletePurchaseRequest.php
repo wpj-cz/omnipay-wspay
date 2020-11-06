@@ -6,7 +6,7 @@ class CompletePurchaseRequest extends PurchaseRequest
 {
     public function getData()
     {
-        return $this->httpRequest->request->all();
+        return $this->httpRequest->query->getIterator()->getArrayCopy();
     }
 
     public function sendData($data)
