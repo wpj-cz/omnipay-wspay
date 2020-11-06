@@ -147,7 +147,7 @@ class Gateway extends AbstractGateway
 
     public function completePurchase(array $parameters = array())
     {
-        $parameters = count($parameters) < 1 ? $this->httpRequest->request->all() : $parameters;
+        $parameters = count($parameters) < 1 ? $this->httpRequest->query->getIterator()->getArrayCopy() : $parameters;
         return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
 
