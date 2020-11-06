@@ -147,6 +147,7 @@ class Gateway extends AbstractGateway
 
     public function completePurchase(array $parameters = array())
     {
+        $parameters = count($parameters) < 1 ? $this->httpRequest->request->all() : $parameters;
         return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
 
@@ -210,7 +211,6 @@ class Gateway extends AbstractGateway
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface authorize(array $options = array())
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface completeAuthorize(array $options = array())
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface capture(array $options = array())
-        // TODO: Implement @method \Omnipay\Common\Message\RequestInterface completePurchase(array $options = array())
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface refund(array $options = array())
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface void(array $options = array())
         // TODO: Implement @method \Omnipay\Common\Message\RequestInterface createCard(array $options = array())
