@@ -102,7 +102,7 @@ class Gateway extends AbstractGateway
 
     public function setTotalAmount(string $value)
     {
-        return $this->setParameter('TotalAmount', $this->getFormatedPrice($value));
+        return $this->setParameter('TotalAmount', $value);
     }
 
     public function getLang()
