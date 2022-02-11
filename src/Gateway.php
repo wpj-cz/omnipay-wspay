@@ -90,7 +90,7 @@ class Gateway extends AbstractGateway
     public function setSignature(string $shopId, string $secretKey, string $shoppingCartId, string $amount)
     {
         $formatedAmount = $this->getFormatedPrice($amount);
-        $signature      = md5($shopId.$secretKey.$shoppingCartId.$secretKey.$formatedAmount.$secretKey);
+        $signature      = hash('sha512', $shopId.$secretKey.$shoppingCartId.$secretKey.$formatedAmount.$secretKey);
 
         return $this->setParameter('Signature', $signature);
     }
@@ -102,7 +102,7 @@ class Gateway extends AbstractGateway
 
     public function setTotalAmount(string $value)
     {
-        return $this->setParameter('TotalAmount', $value);
+        return $this->setParameter('TotalAmount', $this->getFormatedPrice($value));
     }
 
     public function getLang()
