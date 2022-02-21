@@ -8,6 +8,8 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $data = array();
+        
+        $data['Version'] = $this->getVersion();
         $data['ShopID'] = $this->getShopId();
         $data['ShoppingCartID'] = $this->getShoppingCartId();
         $data['TotalAmount'] = $this->getTotalAmount();
@@ -23,6 +25,7 @@ class PurchaseRequest extends AbstractRequest
         $data['CustomerEmail'] = $this->getCustomerEmail();
         $data['CustomerPhone'] = $this->getCustomerPhone();
         $data['CustomerCountry'] = $this->getCustomerCountry();
+        
         return $data;
     }
 
