@@ -31,6 +31,20 @@ class Gateway extends AbstractGateway
             'testMode'  => true,
         );
     }
+    
+    public function getVersion(string $value): string
+    {
+        return $this->setParameter('Version', $value);
+    }    
+    
+    public function getVersion(): string
+    {
+        if (!($version = $this->getParameter('Version'))) {
+            $version = '2.0';
+        }
+        
+        return $version;
+    }
 
     public function getShopId()
     {
