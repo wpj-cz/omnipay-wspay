@@ -26,24 +26,21 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
+            'Version'    => '2.0',
             'ShopID'    => '',
             'SecretKey' => '',
             'testMode'  => true,
         );
     }
-    
-    public function getVersion(string $value): string
+
+    public function setVersion(string $value): string
     {
         return $this->setParameter('Version', $value);
-    }    
-    
+    }
+
     public function getVersion(): string
     {
-        if (!($version = $this->getParameter('Version'))) {
-            $version = '2.0';
-        }
-        
-        return $version;
+        return $this->getParameter('Version');
     }
 
     public function getShopId()
@@ -218,6 +215,36 @@ class Gateway extends AbstractGateway
     public function setCustomerCountry($value)
     {
         return $this->setParameter('CustomerCountry', $value);
+    }
+
+    public function getCustomerCity()
+    {
+        return $this->getParameter('CustomerCity');
+    }
+
+    public function setCustomerCity($value)
+    {
+        return $this->setParameter('CustomerCity', $value);
+    }
+
+    public function getCustomerAddress()
+    {
+        return $this->getParameter('CustomerAddress');
+    }
+
+    public function setCustomerAddress($value)
+    {
+        return $this->setParameter('CustomerAddress', $value);
+    }
+
+    public function getCustomerZIP()
+    {
+        return $this->getParameter('CustomerZIP');
+    }
+
+    public function setCustomerZIP($value)
+    {
+        return $this->setParameter('CustomerZIP', $value);
     }
 
     public function __call($name, $arguments)

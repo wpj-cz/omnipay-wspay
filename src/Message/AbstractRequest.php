@@ -186,6 +186,36 @@ abstract class AbstractRequest extends BaseAbstractRequest
         return $this->setParameter('CustomerCountry', $value);
     }
 
+    public function getCustomerCity()
+    {
+        return $this->getParameter('CustomerCity');
+    }
+
+    public function setCustomerCity($value)
+    {
+        return $this->setParameter('CustomerCity', $value);
+    }
+
+    public function getCustomerAddress()
+    {
+        return $this->getParameter('CustomerAddress');
+    }
+
+    public function setCustomerAddress($value)
+    {
+        return $this->setParameter('CustomerAddress', $value);
+    }
+
+    public function getCustomerZIP()
+    {
+        return $this->getParameter('CustomerZIP');
+    }
+
+    public function setCustomerZIP($value)
+    {
+        return $this->setParameter('CustomerZIP', $value);
+    }
+
     public function sendData($data)
     {
         $url = $this->getEndpoint().'?'.http_build_query($data, '', '&');
