@@ -14,6 +14,16 @@ abstract class AbstractRequest extends BaseAbstractRequest
 
     protected $testEndpoint = 'https://formtest.wspay.biz/Authorization.aspx';
 
+    public function getVersion()
+    {
+        return $this->getParameter('Version');
+    }
+
+    public function setVersion($value)
+    {
+        return $this->setParameter('Version', $value);
+    }
+
     public function getShopId()
     {
         return $this->getParameter('ShopID');
